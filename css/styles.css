@@ -1,23 +1,15 @@
-.contacts {
-  font-style: normal;
-}
-
-.contacts-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
-
-.contacts-link:hover,
-.contacts-link:focus {
-  color: #404bbf;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .logo {
@@ -30,16 +22,8 @@ body {
   color: #4d5ae5;
 }
 
-.logo-second-part {
+.logo-studio {
   color: #2e2f42;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 .nav-link {
@@ -55,6 +39,23 @@ a {
   color: #404bbf;
 }
 
+.address {
+  font-style: normal;
+}
+
+.contacts-link {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: #404bbf;
+}
+
+/* Hero */
 .hero {
   background-color: #2e2f42;
 }
@@ -81,15 +82,13 @@ a {
   background-color: #404bbf;
 }
 
-.footer {
+/* Footer */
+.page-footer {
   background-color: #2e2f42;
 }
 
 .logo-footer {
   color: #f4f4fd;
-}
-.page-footer {
-  background-color: #2e2f42;
 }
 
 .footer-text {
@@ -98,18 +97,11 @@ a {
   letter-spacing: 0.02em;
 }
 
+/* Our Team */
 .our-team {
   background-color: #f4f4fd;
 }
 
-.team-name {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-}
 .header-team {
   font-size: 36px;
   line-height: 1.11;
@@ -121,16 +113,10 @@ a {
 .team-item {
   background-color: #ffffff;
 }
+
 .team-title,
 .team-text {
   text-align: center;
-}
-.team-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
 }
 
 .team-title {
@@ -138,7 +124,6 @@ a {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  text-align: center;
   color: #2e2f42;
 }
 
@@ -146,10 +131,10 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  text-align: center;
   color: #434455;
 }
 
+/* Portfolio */
 .portfolio-header {
   font-weight: 700;
   font-size: 36px;
