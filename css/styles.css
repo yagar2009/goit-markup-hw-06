@@ -327,11 +327,14 @@ img {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 120px; /* можно 80-120, зависит от макета */
 }
 
 .footer-info {
   max-width: 264px;
+}
+
+.footer-info-margin {
+  margin-right: 120px;
 }
 
 .footer-logo {
