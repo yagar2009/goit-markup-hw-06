@@ -318,3 +318,76 @@ img {
   letter-spacing: 0.02em;
   max-width: 264px;
 }
+
+.page-footer {
+  background-color: #2e2f42;
+  padding: 100px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 120px; /* можно 80-120, зависит от макета */
+}
+
+.footer-info {
+  max-width: 264px;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #4d5ae5;
+}
+
+.page-footer .logo-part {
+  color: #f4f4fd;
+}
+
+.text-footer {
+  color: #f4f4fd;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* Social */
+.footer-social-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #31d0aa; /* как в типовом макете GoIT */
+}
+
+.footer-social-icon {
+  fill: currentColor;
+}
