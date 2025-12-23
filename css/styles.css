@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -54,7 +55,7 @@ button {
    ========================================= */
 .container {
   min-width: 320px;
-  max-width: 428px; 
+  max-width: 428px; /* чуть больше для больших тл */
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -90,7 +91,7 @@ button {
 
 .nav-list,
 .contacts {
-  display: none;
+  display: none; 
 }
 
 .logo {
@@ -248,8 +249,8 @@ button {
 
 .mobile-menu-socials {
   display: flex;
-  gap: 40px; 
-  justify-content: flex-start; 
+  gap: 40px; /* Великий відступ між іконками як у макеті */
+  justify-content: flex-start; /* Вирівнювання зліва */
 }
 
 /* =========================================
@@ -261,7 +262,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/hero-mobile.jpg); 
+    url(../images/hero/hero-mobile.jpg); /* Перевірте шлях */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -422,9 +423,9 @@ button {
   background-color: #ffffff;
   width: 100%;
 
-  
+  /* ФІКСАЦІЯ: Максимальна ширина як у Figma (264px) */
   max-width: 264px;
-  margin: 0 auto; 
+  margin: 0 auto; /* Центруємо, якщо екран ширший */
 
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -502,7 +503,7 @@ button {
   margin-bottom: 72px;
 }
 
-.portfolio-list {
+   .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
@@ -511,7 +512,6 @@ button {
 
 .portfolio-item {
   width: 100%;
-
   
   max-width: 288px;
   margin: 0 auto; 
@@ -557,7 +557,7 @@ button {
   border-top: none;
 }
 
-
+/* Специфічні стилі для тексту портфоліо */
 .portfolio-card-content .feature-title {
   font-weight: 500;
   font-size: 20px;
@@ -565,11 +565,11 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  text-align: left; 
+  text-align: left; /* Текст зліва */
 }
 
 .portfolio-card-content .feature-text {
-  text-align: left; 
+  text-align: left; /* Текст зліва */
 }
 
 /* =========================================
@@ -917,7 +917,7 @@ button {
    TABLET STYLES 
    ========================================= */
 @media screen and (min-width: 768px) {
-  
+  /* Header */
   .burger-btn {
     display: none;
   }
@@ -1011,7 +1011,7 @@ button {
     margin-bottom: 36px;
   }
 
-  
+  /* Features */
   .features-list {
     gap: 72px 24px;
   }
@@ -1022,7 +1022,7 @@ button {
     text-align: left;
   }
 
-  
+  /* Team */
   .team-list {
     column-gap: 24px;
     row-gap: 64px;
@@ -1032,18 +1032,18 @@ button {
     max-width: 264px;
   }
 
-  
+  /* Portfolio */
   .portfolio-list {
     column-gap: 24px;
     row-gap: 72px;
   }
   .portfolio-item {
     width: calc((100% - 24px) / 2);
-    
+    /* На планшеті картки трохи ширші, тому знімаємо жорстке обмеження або ставимо 356px як в макеті */
     max-width: 356px;
   }
 
-  
+  /* Footer */
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1065,14 +1065,14 @@ button {
     gap: 24px;
   }
 
-  
+  /* Modal */
   .modal {
     width: 408px;
     min-height: 584px;
   }
 }
 
-/* /* =========================================
+/*  =========================================
    DESKTOP STYLES 
    ========================================= */
 @media screen and (min-width: 1158px) {
@@ -1119,7 +1119,7 @@ button {
     margin-bottom: 48px;
   }
 
-  
+ 
   .features-section {
     padding: 120px 0;
   }
@@ -1170,36 +1170,39 @@ button {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 
-  
+  /* --- Footer (Flex Fix) --- */
   .page-footer {
     padding: 100px 0;
   }
 
   .footer-container {
-    padding-left: 15px; 
+    padding-left: 15px; /* Скидаємо відступи планшета */
     padding-right: 15px;
 
-    flex-direction: row; 
-    align-items: baseline; 
-    flex-wrap: nowrap; 
-    gap: 0; 
+    flex-direction: row; /* В ряд */
+    align-items: baseline; /* Вирівнювання по тексту */
+    flex-wrap: nowrap; /* ЗАБОРОНЯЄМО перенос на новий рядок */
+    gap: 0; /* Прибираємо gap, використовуємо margin */
   }
 
-  
+  /* Лівий блок (Лого + текст) */
   .footer-info {
-    margin-right: 120px; 
+    margin-right: 120px; /* Фіксований відступ як у фігмі */
     margin-bottom: 0;
   }
 
+  /* Середній блок (Соцмережі) */
   .footer-social {
-    margin-right: 80px;
+    margin-right: 80px; /* Фіксований відступ як у фігмі */
     margin-bottom: 0;
   }
 
+  /* Правий блок (Підписка) */
   .footer-subscribe {
-    margin-left: 0;
+    margin-left: 0; 
   }
 
+ 
   .footer-subscribe-form {
     flex-direction: row;
     gap: 24px;
