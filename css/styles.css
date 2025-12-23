@@ -1,9 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -54,8 +61,8 @@ button {
    CONTAINER 
    ========================================= */
 .container {
-  min-width: 320px;
-  max-width: 428px; /* чуть больше для больших тл */
+  width: 100%;
+  max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -66,6 +73,7 @@ button {
   }
 }
 
+/* Desktop Container */
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -81,6 +89,9 @@ button {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   background-color: #ffffff;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .page-header .container {
@@ -91,7 +102,7 @@ button {
 
 .nav-list,
 .contacts {
-  display: none; 
+  display: none;
 }
 
 .logo {
@@ -102,7 +113,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  padding: 16px 0;
+  padding: 0;
 }
 
 .header-logo .logo-part {
@@ -124,7 +135,6 @@ button {
 /* =========================================
    MOBILE MENU
    ========================================= */
-
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -191,7 +201,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 40px;
-
   align-items: flex-start;
   padding: 0;
   margin: 0;
@@ -211,9 +220,6 @@ button {
 .mobile-menu-link:hover,
 .mobile-menu-link:focus {
   color: #404bbf;
-}
-
-.mobile-menu-bottom {
 }
 
 .mobile-menu-contacts-list {
@@ -249,8 +255,9 @@ button {
 
 .mobile-menu-socials {
   display: flex;
-  gap: 40px; /* Великий відступ між іконками як у макеті */
-  justify-content: flex-start; /* Вирівнювання зліва */
+  gap: 40px;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 /* =========================================
@@ -262,7 +269,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/hero-mobile.jpg); /* Перевірте шлях */
+    url(../images/hero/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -289,20 +296,6 @@ button {
   max-width: 216px;
   margin: 0 auto 72px;
   font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .hero-title {
-    font-size: 56px;
-    line-height: 1.07;
-    max-width: 496px;
-    margin-bottom: 36px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .hero-title {
-    margin-bottom: 48px;
-  }
 }
 
 .hero-button {
@@ -346,19 +339,6 @@ button {
   max-width: 288px;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
-  .features-item {
-    width: calc((100% - 24px) / 2);
-    max-width: 100%;
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-  .features-item {
-    width: calc((100% - 72px) / 4);
-  }
-}
 
 .features-icon-box {
   display: none;
@@ -391,10 +371,11 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: left;
 }
 
 /* =========================================
-   TEAM SECTION (FIXED WIDTHS)
+   TEAM SECTION
    ========================================= */
 .ourteam-section {
   background-color: #f4f4fd;
@@ -422,11 +403,8 @@ button {
 .team-card {
   background-color: #ffffff;
   width: 100%;
-
-  /* ФІКСАЦІЯ: Максимальна ширина як у Figma (264px) */
   max-width: 264px;
-  margin: 0 auto; /* Центруємо, якщо екран ширший */
-
+  margin: 0 auto;
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -486,7 +464,7 @@ button {
 }
 
 /* =========================================
-   PORTFOLIO SECTION (FIXED WIDTHS)
+   PORTFOLIO SECTION
    ========================================= */
 .portfolio-section {
   padding: 96px 0;
@@ -503,18 +481,17 @@ button {
   margin-bottom: 72px;
 }
 
-   .portfolio-list {
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
   gap: 48px;
 }
 
 .portfolio-item {
   width: 100%;
-  
   max-width: 288px;
-  margin: 0 auto; 
+  margin: 0 auto;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -557,7 +534,6 @@ button {
   border-top: none;
 }
 
-/* Специфічні стилі для тексту портфоліо */
 .portfolio-card-content .feature-title {
   font-weight: 500;
   font-size: 20px;
@@ -565,15 +541,15 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
-  text-align: left; /* Текст зліва */
+  text-align: left;
 }
 
 .portfolio-card-content .feature-text {
-  text-align: left; /* Текст зліва */
+  text-align: left;
 }
 
 /* =========================================
-   FOOTER (Mobile First)
+   FOOTER
    ========================================= */
 .page-footer {
   background-color: #2e2f42;
@@ -584,6 +560,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 72px;
+
   align-items: center;
 }
 
@@ -704,7 +681,7 @@ button {
 }
 
 /* =========================================
-   MODAL -------------------- BACKDROP
+   MODAL / BACKDROP
    ========================================= */
 .backdrop {
   position: fixed;
@@ -734,7 +711,7 @@ button {
   transform: translate(-50%, -50%);
   width: calc(100% - 32px);
   max-width: 408px;
-  min-height: 623px;
+  min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -858,11 +835,14 @@ button {
   margin-bottom: 24px;
 }
 
+/* Fix from Mentor: Flexbox for checkbox label */
 .modal-check-label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex; /* Робимо рядком */
+  align-items: center; /* Центруємо по вертикалі */
 }
 
 .modal-check-span {
@@ -878,6 +858,7 @@ button {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .modal-check-input:checked + .modal-check-label .modal-check-span {
@@ -914,10 +895,14 @@ button {
 }
 
 /* =========================================
-   TABLET STYLES 
+   TABLET STYLES (min-width: 768px)
    ========================================= */
 @media screen and (min-width: 768px) {
   /* Header */
+  .page-header {
+    padding: 0;
+  }
+
   .burger-btn {
     display: none;
   }
@@ -1017,6 +1002,8 @@ button {
   }
   .features-item {
     width: calc((100% - 24px) / 2);
+    max-width: 100%;
+    margin: 0;
   }
   .feature-title {
     text-align: left;
@@ -1026,10 +1013,12 @@ button {
   .team-list {
     column-gap: 24px;
     row-gap: 64px;
+    justify-content: center;
   }
   .team-card {
     width: calc((100% - 24px) / 2);
     max-width: 264px;
+    margin: 0;
   }
 
   /* Portfolio */
@@ -1039,7 +1028,6 @@ button {
   }
   .portfolio-item {
     width: calc((100% - 24px) / 2);
-    /* На планшеті картки трохи ширші, тому знімаємо жорстке обмеження або ставимо 356px як в макеті */
     max-width: 356px;
   }
 
@@ -1072,11 +1060,11 @@ button {
   }
 }
 
-/*  =========================================
-   DESKTOP STYLES 
+/* =========================================
+   DESKTOP STYLES (min-width: 1158px)
    ========================================= */
 @media screen and (min-width: 1158px) {
-  
+  /* Header */
   .logo {
     margin-right: 76px;
   }
@@ -1092,7 +1080,7 @@ button {
     padding: 24px 0;
   }
 
-  
+  /* Hero */
   .hero-section {
     padding: 188px 0;
     background-image: linear-gradient(
@@ -1100,11 +1088,8 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/hero-desktop.jpg);
-
-    
     max-width: 100%;
   }
-
   @media screen and (min-resolution: 192dpi) {
     .hero-section {
       background-image: linear-gradient(
@@ -1114,12 +1099,11 @@ button {
         url(../images/hero/hero-desktop@2x.jpg);
     }
   }
-
   .hero-title {
     margin-bottom: 48px;
   }
 
- 
+  /* Features */
   .features-section {
     padding: 120px 0;
   }
@@ -1141,7 +1125,7 @@ button {
     font-weight: 400;
   }
 
-  
+  /* Team */
   .ourteam-section {
     padding: 120px 0;
   }
@@ -1153,7 +1137,7 @@ button {
     max-width: 100%;
   }
 
-  
+  /* Portfolio */
   .portfolio-section {
     padding: 120px 0;
   }
@@ -1170,39 +1154,29 @@ button {
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 
-  /* --- Footer (Flex Fix) --- */
+  /* Footer */
   .page-footer {
     padding: 100px 0;
   }
-
   .footer-container {
-    padding-left: 15px; /* Скидаємо відступи планшета */
+    padding-left: 15px;
     padding-right: 15px;
-
-    flex-direction: row; /* В ряд */
-    align-items: baseline; /* Вирівнювання по тексту */
-    flex-wrap: nowrap; /* ЗАБОРОНЯЄМО перенос на новий рядок */
-    gap: 0; /* Прибираємо gap, використовуємо margin */
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
   }
-
-  /* Лівий блок (Лого + текст) */
   .footer-info {
-    margin-right: 120px; /* Фіксований відступ як у фігмі */
+    margin-right: 120px;
     margin-bottom: 0;
   }
-
-  /* Середній блок (Соцмережі) */
   .footer-social {
-    margin-right: 80px; /* Фіксований відступ як у фігмі */
+    margin-right: 80px;
     margin-bottom: 0;
   }
-
-  /* Правий блок (Підписка) */
   .footer-subscribe {
-    margin-left: 0; 
+    margin-left: 0;
   }
-
- 
   .footer-subscribe-form {
     flex-direction: row;
     gap: 24px;
